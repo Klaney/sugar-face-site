@@ -81,8 +81,10 @@ figcaption {
   margin: 0 auto;
 }
 /* About: tuck the top of the watercolor up under the last paragraph.
-   This collapses with the paragraph's 22px bottom margin, so the net overlap is ~78px. */
-.prose .centered-image { margin: -100px auto 22px; }
+   Percent margins are relative to the column width, so this is -200px at the
+   full 800px column and shrinks with the image on phones (keeping the drawing
+   itself clear of the text). Collapses with the paragraph's 22px bottom margin. */
+.prose .centered-image { margin: -25% auto 22px; }
 
 .fine-print {
   font-size: 10px;
