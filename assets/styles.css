@@ -1,0 +1,130 @@
+/* Recreates the original Wix site's look: white page, black Montserrat text,
+   right-aligned nav, single centered content column. */
+
+:root {
+  --text: #000;
+  --nav-active: #707070;
+  --bg: #fff;
+  --column: 800px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; }
+
+/* Header / nav */
+.site-header {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 12px 16px;
+}
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.site-nav a {
+  display: block;
+  padding: 14px 13px;
+  text-decoration: none;
+  color: var(--text);
+}
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--nav-active);
+}
+
+/* Content column */
+main {
+  max-width: calc(var(--column) + 32px);
+  margin: 0 auto;
+  padding: 24px 16px 56px;
+}
+.prose p {
+  margin: 0 0 22px;
+  text-align: justify;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0 0 12px;
+}
+
+figure { margin: 0 0 22px; }
+figcaption {
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.centered-image {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.fine-print {
+  font-size: 10px;
+  text-align: justify;
+}
+
+/* Home */
+.home-hero {
+  max-width: none;
+  padding: 0 16px;
+}
+.home-hero img {
+  margin: 0 auto;
+  max-height: calc(100vh - 80px);
+  width: auto;
+}
+
+/* Order */
+main.order { max-width: 1012px; }
+.order h1 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.order img {
+  width: 600px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* Recommended Products */
+.products { font-size: 14px; }
+.products .disclosure {
+  text-align: center;
+  margin: 0 0 30px;
+}
+.products ul {
+  list-style: none;
+  margin: 22px 0;
+  padding: 0;
+}
+.products li { margin-bottom: 19px; }
+.products li a { overflow-wrap: anywhere; }
+
+@media (max-width: 760px) {
+  h1 { font-size: 36px; }
+  .prose p, .fine-print { text-align: left; }
+  .site-nav ul { justify-content: center; }
+  .site-nav a { padding: 8px 10px; }
+}
