@@ -57,8 +57,10 @@ main {
   padding: 24px 16px 56px;
 }
 .prose p {
+  position: relative; /* keeps text painted above the overlapping About image */
   margin: 0 0 22px;
   text-align: justify;
+  hyphens: auto;
 }
 
 h1 {
@@ -78,6 +80,8 @@ figcaption {
   width: 600px;
   margin: 0 auto;
 }
+/* About: tuck the top of the watercolor up under the last paragraph */
+.prose .centered-image { margin: -40px auto 22px; }
 
 .fine-print {
   font-size: 10px;
@@ -110,6 +114,7 @@ main.order { max-width: 1012px; }
 
 /* Recommended Products */
 .products { font-size: 14px; }
+.products h1 { text-align: center; }
 .products .disclosure {
   text-align: center;
   margin: 0 0 30px;
@@ -124,7 +129,6 @@ main.order { max-width: 1012px; }
 
 @media (max-width: 760px) {
   h1 { font-size: 36px; }
-  .prose p, .fine-print { text-align: left; }
   .site-nav ul { justify-content: center; }
   .site-nav a { padding: 8px 10px; }
 }
