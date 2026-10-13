@@ -80,8 +80,9 @@ figcaption {
   width: 600px;
   margin: 0 auto;
 }
-/* About: tuck the top of the watercolor up under the last paragraph */
-.prose .centered-image { margin: -40px auto 22px; }
+/* About: tuck the top of the watercolor up under the last paragraph.
+   This collapses with the paragraph's 22px bottom margin, so the net overlap is ~78px. */
+.prose .centered-image { margin: -100px auto 22px; }
 
 .fine-print {
   font-size: 10px;
